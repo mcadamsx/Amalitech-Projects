@@ -1,0 +1,6 @@
+{
+  "/*": {
+    "target": "http://your-api-server.com",
+    "secure": false
+  }
+}

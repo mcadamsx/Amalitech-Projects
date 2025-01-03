@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';;
+}
+body{
+    background-color: #000;
+    padding: 2%;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color: hsl(0, 0%, 100%);
+}
+header{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    width: 80%;
+}
+.title h4{
+    font-size: 2rem;
+}
+.title p {
+    font-weight: bold;
+    color: hsl(228, 12%, 44%);
+}
+hr{
+    visibility: hidden;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  input:checked + .slider {
+    background-color: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+.toggle{
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+}
+.toggle p{
+    font-size: 1.1rem;
+    color: hsl(228, 12%, 44%);
+    font-weight: bold;
+    margin-right: 5px;
+}
+.cards{
+    display: flex;
+    width: 80%;
+    margin: 5% auto;
+    justify-content: space-between;
+    text-align: center;
+}
+.cards h6{
+    font-size: 1rem;
+}
+.card1,.card2,.card3,.card4{
+    padding: 2%;
+    background-color:hsl(225, 100%, 98%);;
+    width: 19%;
+    border-radius: 5px;
+    border-top: 5px solid hsl(208, 92%, 53%);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.card1:hover{
+    
+    background-color:hsl(227, 47%, 96%)
+}
+.card2:hover{
+    background-color: hsl(227, 47%, 96%);
+}
+.card3:hover{
+    background-color: hsl(227, 47%, 96%);
+}
+.card4:hover{
+    background-color:hsl(227, 47%, 96%);
+}
+.cards h2{
+    margin: 10% auto;
+    font-size: 4rem;
+}
+.cards h2 p{
+    font-size: 0.8rem;
+    color: hsl(228, 12%, 44%);
+    font-weight: lighter;
+    letter-spacing: 8px;
+}
+.cards span{
+    font-size: 0.9rem;
+    color: hsl(163, 72%, 41%);
+    font-weight: bold;
+}
+.cards h6{
+    color: hsl(228, 12%, 44%);
+}
+.cards h6 img{
+    margin: 0 5%;
+}
+.card4 span{
+    color: hsl(356, 69%, 56%);
+}
+.card2{
+border-top: 5px solid hsl(203, 89%, 53%);
+}
+.card3{
+    border-radius: 5px;
+    border-image: linear-gradient(to right, rgb(243, 212, 75), rgb(238, 57, 223)) 1;       
+}
+.card4{
+    border-top: 5px solid hsl(348, 97%, 39%);
+}
+.tittle{
+    width: 80%;
+    margin: 0 auto;
+}
+.tittle h4{
+    font-size: 2rem;
+    color: hsl(228, 12%, 44%);
+}
+.overview{
+    width: 80%;
+    display: flex;
+    margin: 2% auto;
+    justify-content: space-between;
+}
+.overview-card{
+    width: 19%;
+    padding: 2%;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.overview-card:hover{
+    background-color: hsl(227, 47%, 96%);
+}
+.overview-card .header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: hsl(228, 12%, 44%);
+    font-weight: bold;
+}
+.overview-card .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+.content span{
+    font-size: 0.9rem;
+    color: hsl(163, 72%, 41%);
+    font-weight: bold;
+}
+.content .down{
+    color: hsl(356, 69%, 56%);
+}
+@media screen and (min-width: 320px) and (max-width:480px) {
+    body{
+        padding: 2%;
+    }
+    header{
+      display: flex; flex-direction: column;
+    }
+    .title{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .title h4{
+        font-size: 1.5rem;
+
+    }
+    hr{
+        opacity: 20%;
+        color: #000;
+        border: 0.5px solid #000;
+        visibility: visible;
+    }
+    .toggle{
+        margin-top: 5%;
+        width: 100%;
+    }
+    .cards{
+        display: flex; flex-direction: column;
+        margin: 20% auto;
+        padding: 0;
+    }
+    .card1,.card2,.card3,.card4{
+        width: 90%;
+        margin: 5% auto;
+        padding: 0;
+       
+    }
+    .overview{
+        display: flex; flex-direction: column;
+        margin: 2% auto;
+    }
+    .overview-card{
+        width: 90%;
+        margin: 2% auto;
+    }
+    #card{
+        padding: 5%;
+    }
+    
+}

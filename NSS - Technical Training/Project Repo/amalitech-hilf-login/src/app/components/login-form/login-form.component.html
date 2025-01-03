@@ -1,0 +1,48 @@
+
+<form action="" (ngSubmit)="loginUser()" [formGroup]="loginForm"
+      class="lg:w-5/12 w-full rounded-3xl bg-semi-dark-blue mx-auto ">
+  @if(isLoading){
+    <app-spinner></app-spinner>
+  }
+  <div *ngIf="errorMessage" class="p-2 border border-red-600 rounded-xl text-red-500">
+    {{errorMessage}}
+
+  </div>
+  <div class="my-3 w-full relative ">
+    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.05562 0.841919L19.2307 0.841919C19.4985 0.841919 19.7553 0.9483 19.9447 1.13766C20.134
+        1.32702 20.2404 1.58385 20.2404 1.85165V18.0073C20.2404 18.2751 20.134 18.5319 19.9447 18.7213C19.7553 18.9106
+        19.4985 19.017 19.2307 19.017H1.05562C0.787829 19.017 0.531001 18.9106 0.34164 18.7213C0.15228 18.5319
+        0.0458984 18.2751 0.0458984 18.0073L0.0458984 1.85165C0.0458984 1.58385 0.15228 1.32702 0.34164 1.13766C0.531001
+         0.9483 0.787829 0.841919 1.05562 0.841919ZM18.221 5.12114L10.2159 12.2902L2.06535 5.09893L2.06535
+         16.9975H18.221V5.12114ZM2.58132 2.86137L10.2048 9.58817L17.7181 2.86137L2.58132 2.86137Z" fill="lightgray"/>
+      </svg>
+    </div>
+    <input type="email" formControlName="email"
+           class="bg-transparent rounded-lg border-gray-300 border font-normal text-md  w-full p-1.5 pl-10 focus:outline-Bg-button "
+           placeholder="Email">
+
+  </div>
+  <small  *ngIf=" email.invalid && (email.dirty || email.touched)" class="text-Bg-button text-sm">
+    <div *ngIf="email.errors?.['email']">Invalid Email</div>
+  </small>
+  <div class="my-5 w-full relative">
+    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+      <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M16.2115 8.99926H17.2213C17.4891 8.99926 17.7459 9.10564 17.9352 9.295C18.1246 9.48436 18.231 9.74119 18.231 10.009V20.1062C18.231 20.374 18.1246 20.6309 17.9352 20.8202C17.7459 21.0096 17.4891 21.116 17.2213 21.116H1.06563C0.797838 21.116 0.541011 21.0096 0.35165 20.8202C0.16229 20.6309 0.0559082 20.374 0.0559082 20.1062L0.0559082 10.009C0.0559082 9.74119 0.16229 9.48436 0.35165 9.295C0.541011 9.10564 0.797838 8.99926 1.06563 8.99926H2.07536V7.98953C2.07536 7.06134 2.25818 6.14223 2.61339 5.28469C2.96859 4.42715 3.48922 3.64797 4.14555 2.99164C4.80189 2.33531 5.58107 1.81468 6.43861 1.45947C7.29615 1.10427 8.21525 0.921448 9.14345 0.921448C10.0716 0.921448 10.9907 1.10427 11.8483 1.45947C12.7058 1.81468 13.485 2.33531 14.1413 2.99164C14.7977 3.64797 15.3183 4.42715 15.6735 5.28469C16.0287 6.14223 16.2115 7.06134 16.2115 7.98953V8.99926ZM2.07536 11.0187L2.07536 19.0965H16.2115V11.0187L2.07536 11.0187ZM8.13372 13.0382H10.1532L10.1532 17.0771H8.13372L8.13372 13.0382ZM14.1921 8.99926V7.98953C14.1921 6.65055 13.6602 5.36641 12.7134 4.41961C11.7666 3.47281 10.4824 2.9409 9.14345 2.9409C7.80446 2.9409 6.52033 3.47281 5.57352 4.41961C4.62672 5.36641 4.09481 6.65055 4.09481 7.98953L4.09481 8.99926H14.1921Z"
+          fill="lightgray"/>
+      </svg>
+    </div>
+    <input type="password" formControlName="password"
+           class="bg-transparent border rounded-lg border-gray-300 font-normal text-md  w-full p-1.5 pl-10 focus:outline-Bg-button"
+           placeholder="Password">
+  </div>
+  <div class="mb-10">
+    <button type="submit" [disabled]="loginForm.invalid"
+            class="bg-Bg-button text-md font-normal lg:w-5/12 rounded-xl text-white p-2  w-full ">
+      Sign in
+    </button>
+  </div>
+</form>

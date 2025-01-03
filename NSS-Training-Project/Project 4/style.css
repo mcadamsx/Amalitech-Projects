@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
+}
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(360deg,hsl(240, 73%, 65% ) 0%, hsl(273, 75%, 66%));
+    
+}
+.contanier{
+    width: 70%;
+    height: 70vh;
+    margin: 10% auto;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+.avater{
+    width: 50%;
+    margin: 0% auto;
+    overflow: hidden;
+}
+.avater .image1{
+    width: 110%;
+    margin-left: -10%;
+    z-index: 90px;
+    margin-top: 20%;
+}
+.avater .image2{
+  margin-left: -120%;
+  margin-top: -160%;
+  width: 220%;
+}
+
+.text{
+    width: 50%;
+    margin: 0 auto;
+    padding: 8%;
+}
+.text-title{
+    margin-bottom: 10%;
+}
+.text header h3{
+    font-size: 3rem;
+   
+  
+}
+
+
+.title{
+  
+    display: flex;
+    margin: 3% auto;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    color: hsl(237, 12%, 33%);
+    font-weight: 300;
+}
+.title:hover{
+    color: hsl(14, 88%, 65%);
+}
+.title:active{
+    color: hsl(238, 29%, 16%);
+}
+.description{
+    margin: 3% auto;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s ease ;
+    font-size: 12px;
+    font-weight:300;
+    color: hsl(237, 12%, 33%);
+   
+}
+hr{
+    align-items: center;
+  
+    margin: 0 auto;
+    opacity: 40%;
+}
